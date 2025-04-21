@@ -23,3 +23,21 @@ Attackers use Nmap to extract information such as live hosts on the network, ope
     Identify software versions or configurations by collecting banner information from exposed services.
     nmap -sV --script=banner 192.168.1.10
 
+Dig command
+Dig command stands for Domain Information Groper. It retrieves information about DNS name servers. Network administrators use it to verify and troubleshoot DNS problems and perform DNS lookups. The dig nslookup and the host.
+
+Installing
+sudo apt-get install dnsutils
+
+To query domain “A” record with +short
+dig geeksforgeeks.org +short
+
+Remove comments 
+dig geeksforgeeks.org +nocomments
+
+To query all DNS record types.dig geeksforgeeks.org ANY
+dig geeksforgeeks.org +noall +answer
+
+To trace DNS path
+dig geeksforgeeks.org +trace
+
