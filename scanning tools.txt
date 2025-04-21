@@ -1,1 +1,25 @@
+What is Nmap
+Network administrators can use Nmap for inventorying a network, managing service upgrade schedules and monitoring host or service uptime.
+Attackers use Nmap to extract information such as live hosts on the network, open ports, services (application name and version) types of packet filters/firewalls as well as operating system and version used. 
+
+1.	Run a basic ping sweep on the network
+    nmap -sn 192.168.1.0/24 
+2.	Port Scanning
+    Identify open ports and services to assess potential attack 
+    nmap -sT 192.168.1.0/24
+3.	Service Version Detection
+    nmap -sV 192.168.1.10
+4.	Operating System Detection for Device Profiling
+    Profile the operating systems of devices to identify potential weak points in OS-specific security.
+5.	Perform an OS detection scan using Nmap
+    nmap -O 192.168.1.0/24
+6.	Firewall Rule Testing with Stealth Scan
+    Verify the firewall’s configuration by attempting to bypass detection using stealth scans.
+    nmap -sS 192.168.1.0/24
+7.	UDP Scan for Open UDP Services
+    Discover any open UDP ports to check for insecure or unnecessary
+    nmap -sU 192.168.1.0/24
+8.	 Banner Grabbing to Identify
+    Identify software versions or configurations by collecting banner information from exposed services.
+    nmap -sV --script=banner 192.168.1.10
 
